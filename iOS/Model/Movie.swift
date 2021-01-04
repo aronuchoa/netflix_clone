@@ -13,6 +13,7 @@ struct Movie: Identifiable {
     var thumbnailURL: URL
     
     var categories: [String]
+    var genre: HomeGenre = .AllGenres
     
     // MovieDetail View
     var year: Int
@@ -28,6 +29,10 @@ struct Movie: Identifiable {
     var moreLikeThisMovies: [Movie]
     
     var episodes: [Episode]?
+    
+    var movieType: MovieType {
+        return episodes == nil ? .movie : .tvShow
+    }
     
     var promotionHeadline: String?
     
