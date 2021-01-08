@@ -12,7 +12,6 @@ struct ContentView: View {
     init() {
         UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().barTintColor = UIColor.black
-        UITabBar.appearance().backgroundColor = UIColor.white
     }
     
     var body: some View {
@@ -24,7 +23,7 @@ struct ContentView: View {
                     Text("Home")
                 }.tag(0)
             
-            Text("Search")
+            SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")
