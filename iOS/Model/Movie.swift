@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Movie: Identifiable {
     var id: String
@@ -22,6 +23,9 @@ struct Movie: Identifiable {
     
     // Personalization
     var currentEpisodeInfo: CurrentEpisodeInfo?
+    
+    var accentColor: Color = .white
+    
     var defaultEpisodeInfo: CurrentEpisodeInfo
     var creators: String
     var cast: String
@@ -37,6 +41,9 @@ struct Movie: Identifiable {
     var promotionHeadline: String?
     
     var trailers: [Trailer]
+    
+    var previewImageName: String
+    var previewVideoURL: URL?
     
     var numberOfSeasonsDisplay: String {
         if let num = numberOfSeasons {
